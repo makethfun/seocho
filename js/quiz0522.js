@@ -1,23 +1,33 @@
 // 1. for문을 이용하여 다음과 같이 정확한 숫자를 출력하는 코드를 작성하시오.
-console.log('----------------[1]----------------');
-
-for(let i = 0.1; i < 1; i = i + 0.1){
-    if (i > 0.9) {
-        console.log(1)
-    } else { 
-        console.log(Number(i.toFixed(1)));
+function p50(){
+    for(let i = 0.1; i < 1; i = i + 0.1){
+        if (i > 0.9) {
+            console.log(1)
+        } else { 
+            console.log(Number(i.toFixed(1)));
+        }
     }
 }
 
-// 2. 1 ~ 10 사이의 정수에 대해 제곱근을 소숫점 3자리까지 출력하시오. 
-console.log('----------------[2]----------------');
+// p50();
 
-for(let i = 1; i < 11; i = i + 1){
-    console.log(Number(Math.sqrt(i).toFixed(3)));
+
+// 2. 1 ~ 10 사이의 정수에 대해 제곱근을 소숫점 3자리까지 출력하시오. 
+// 무리수만 출력
+
+function p51() {
+    for(let i = 1; i < 11; i = i + 1){
+        const num = +Math.sqrt(i).toFixed(3);
+        if(num % 1){
+            console.log(i, num)
+        }
+    }
 }
 
+// p51();
+
+
 // 3. 오늘 날짜의 요일을 출력하는 switch문을 사용해서 작성해 보고, switch문을 사용하지 않은 더 간단한 방법도 찾아보세요.
-console.log('----------------[3]----------------');
 
 const today = new Date();
 switch(today.getDay()){
