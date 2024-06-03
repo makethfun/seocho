@@ -8,7 +8,6 @@ function p145() {
 
     console.log('ex2) [3]부터 모두 다 추출');
     console.log([...arr2.slice(2)]);
-
     console.log('ex3) [2,3,4] 제거하기');
     console.log('제거 :', arr2.splice(1, 3));
     console.log('현재 arr2 : ', arr2);
