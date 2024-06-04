@@ -96,32 +96,36 @@ function p148() {
     assert.deepStrictEqual(deleteArray(arr, 2), [1, 2]); // 2부터 몽땅 지워!
     assert.deepStrictEqual(deleteArray(arr, 1, 3), [1, 4]); // 1부터 3 앞까지 지워!
     assert.deepStrictEqual(arr, [1, 2, 3, 4]);
+}
 
+function p148() {
     const Hong = { id: 1, name: 'Hong' };
     const Kim = { id: 2, name: 'Kim' };
     const Lee = { id: 3, name: 'Lee' };
     var users = [Hong, Kim, Lee];
 
     function deleteObjectArray(a, ...args) {
-        // console.log(args.length);
-        // console.log(typeof args);
-        typeof args === 'number'
-            ? args.length < 2?
-            console.log(args[0]) : console.log('what')
-            //     ? (a = [...a.slice(0, args[0] - 1)])
-            //     : (a = [...a.slice(args[0] - 1, args[1])])
-            // : console.log(args);
-        // fn === number ? a = [...a.slice] :
-        // console.log(Object.getOwnPropertyNames(a));
-        // return a;
+        function searchKey(a, key, idx) {
+            key === 'name'
+                ? (a = a.filter((a) => a.name != idx))
+                : (a = a.filter((a) => a.id != idx));
+            return a;
+        }
+        typeof args[0] === 'number'
+            ? args.length < 2
+                ? (a = [...a.slice(0, args[0])])
+                : (a = [...a.slice(0, args[0]), ...a.slice(args[1])])
+            : (a = searchKey(a, args[0], args[1]));
+        return a;
     }
 
-    console.log(deleteObjectArray(users, 2));
-    // console.log(deleteObjectArray(users, 1, 2));
-    // console.log(deleteObjectArray(users, 'id', 2));
-    // console.log(deleteObjectArray(users, 'name', 'Lee'));
-
-    // console.log(users);
+    assert.deepStrictEqual(deleteObjectArray(users, 2), [Hong, Kim]);
+    assert.deepStrictEqual(deleteObjectArray(users, 1, 2), [Hong, Lee]);
+    assert.deepStrictEqual(deleteObjectArray(users, 'id', 2), [Hong, Lee]);
+    assert.deepStrictEqual(deleteObjectArray(users, 'name', 'Lee'), [
+        Hong,
+        Kim,
+    ]);
 }
 
 p148();
