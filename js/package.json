@@ -1,17 +1,17 @@
 {
-  "name": "js",
-  "version": "0.1.0",
-  "description": "js study",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "js"
-  ],
-  "author": "makethfun",
-  "license": "ISC",
-  "dependencies": {
-    "moment": "^2.30.1"
-  }
+    "name": "seochostudy",
+    "version": "0.1.0-beta.1",
+    "description": "js study",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "js"
+    ],
+    "author": "makethfun",
+    "license": "ISC",
+    "dependencies": {
+        "moment": "^2.30.1"
+    }
 }

@@ -30,10 +30,13 @@ function p156() {
 
     console.log(
         arr
-            .reduce((acc, currentValue, init) => (acc += square(currentValue)))
-            .reduce((acc, currentValue, init) => (acc += sqrt(currentValue)))
+            .reduce((acc, cur) => [...acc, square(cur)], [])
+            .reduce((acc, cur) => [...acc, sqrt(cur)], [])
+            .reduce((acc, cur) => [...acc, square3(cur)], [])
     );
 }
+
+// p156();
 
 function p158() {
     const arr = [1, 3, 4, 2, 5, 8, 6, 7, 9];
