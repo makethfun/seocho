@@ -1,4 +1,6 @@
-const assert = require('assert');
+// const assert = require('assert');
+
+import assert from 'assert';
 
 function p155() {
     // 몰라요
@@ -37,6 +39,22 @@ function p156() {
 }
 
 // p156();
+
+function p156v1() {
+    // reduce 함수를 만들라는 거?
+    // reduce는 하나의 결과값을 가지는 게 아님? 각 자리에 대한 거? map이랑 차이가 뭥?
+    // 이것도 모르겠네, 문해력..ㅠ
+    const arr = [1, 2, 3, 4, 5];
+    const square = (n) => n ** 2;
+    const sqrt = (n) => Math.sqrt(n);
+    const cube = (n) => n ** 3;
+
+    console.log(arr.reduce((acc, v) => [...acc, cube(sqrt(square(v)))], []));
+
+    console.log([square, sqrt, cube].reduce((acc, f) => acc.map(f), arr));
+}
+
+p156v1();
 
 function p158() {
     const arr = [1, 3, 4, 2, 5, 8, 6, 7, 9];

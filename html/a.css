@@ -1,0 +1,41 @@
+/*변수로 이동하는 법? ctrl + d 아님 ㅠ*/
+/*live server 단축키 cmd + L 안먹음 설정은 되어 있음*/
+.highlight {
+    background-color: yellow;
+}
+/* highlight class의 모든 input
+
+            .highlight ~ input {
+                background-color: green;
+            }
+                */
+/*바로 붙어있는 input만*/
+.highlight + input {
+    background-color: greenyellow;
+}
+/*바로 옆 붙어 있는 input과 띄기*/
+input#num + input {
+    margin-left: 20px;
+}
+#header {
+    font-size: 62px;
+}
+nav > ul {
+    list-style-type: none;
+}
+
+.white {
+    color: white;
+}
+
+.red {
+    color: red;
+}
+
+.fav-color {
+    color: #ff88aa;
+}
+
+.bg-red {
+    background-color: red;
+}

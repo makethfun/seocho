@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    li {
+        @apply p-5;
+    }
+}
+
+@layer components {
+    .btn {
+        @apply bg-red-300 text-white rounded-lg px-3 ml-5 hover:bg-red-500;
+    }
+    .btn-danger {
+        @apply bg-red-300 text-white rounded-lg px-3 ml-5 hover:bg-red-500;
+    }
+    .btn-primary {
+        @apply bg-blue-300 text-white rounded-lg px-3 ml-5 hover:bg-blue-500;
+    }
+}
+
+@layer utilities {
+    .ppx {
+        @apply p-6 m-3;
+    }
+}
